@@ -14,12 +14,20 @@ page_html = uClient.read()
 
 page_soup = str(soup(page_html, "html.parser"))
 
+#test reader outputs username as username / and link as userlink
+#need to create a loop that loops through all soup array pages
+#outputting userlinks to a new array use below as a basis for the reading code
+#will save a finnum as a new reading space
+#and continue searching document until number is -1 (aka not found)
+#when number is -1 else kicks in to go to next page in array
+
 startnum = (page_soup).find('alt="@') +6
 finnum = (page_soup[startnum:]).find('" ')+ startnum
 username = page_soup[startnum:finnum]
 
 userlink= "https://github.com/" + username
 
+#creates urls for pages 1-54 and saves into urls array
 urls = []
 for i in range(1,55):
     urls.append('https://github.com/orgs/RutgersCodingBootcamp/people?page='+ str(i) +'&query=&utf8=')
@@ -27,6 +35,7 @@ for i in range(1,55):
 i=0
 urls[i]
 
+#saves all 54 pages of source code to an array called soup_array
 soup_array = []
 def get_soup():
     n=0
