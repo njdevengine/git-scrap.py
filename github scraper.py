@@ -14,12 +14,7 @@ page_html = uClient.read()
 
 page_soup = str(soup(page_html, "html.parser"))
 
-#test reader outputs username as username / and link as userlink
-#need to create a loop that loops through all soup array pages
-#outputting userlinks to a new array use below as a basis for the reading code
-#will save a finnum as a new reading space
-#and continue searching document until number is -1 (aka not found)
-#when number is -1 else kicks in to go to next page in array
+#next I need my scraping to be part of a request session
 
 startnum = (page_soup).find('alt="@') +6
 finnum = (page_soup[startnum:]).find('" ')+ startnum
