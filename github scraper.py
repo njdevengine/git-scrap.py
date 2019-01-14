@@ -24,8 +24,30 @@ page_soup = str(soup(page_html, "html.parser"))
 startnum = (page_soup).find('alt="@') +6
 finnum = (page_soup[startnum:]).find('" ')+ startnum
 username = page_soup[startnum:finnum]
-
 userlink= "https://github.com/" + username
+userlinks.append(userlink)
+
+#########
+userlinks = []
+def extraction():
+    startnum = 0
+    i = 0
+    finnum = 0
+    while i < 54:
+        if startnum == -1:
+            i+=1
+            finnum = 0
+        else:
+            current_soup = soup_array[i]
+            print ("searching page number: {}".format(i))
+            startnum = current_soup[finnum:].find('alt="@') +6
+            finnum = (page_soup[startnum:]).find('" ')+ startnum
+            username = page_soup[startnum:finnum]
+            userlink= "https://github.com/" + username
+            userlinks.append(userlink)
+            
+
+##########    
 
 #creates urls for pages 1-54 and saves into urls array
 urls = []
