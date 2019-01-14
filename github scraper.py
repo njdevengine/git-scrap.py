@@ -1,3 +1,5 @@
+##curl -i -u njdevengine https://api.github.com/orgs/RutgersCodingBootcamp/members
+
 import bs4
 import re
 import time
