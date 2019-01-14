@@ -1,4 +1,8 @@
 ##curl -i -u njdevengine https://api.github.com/orgs/RutgersCodingBootcamp/members
+##import os
+##os.system("curl -i -u your_github_username:your_github_password https://api.github.com/users/usernamegoeshere")
+## sample excel formula ="os.system("""&D1&""")"
+##this allows you to run command line from python3
 
 import bs4
 import re
