@@ -47,6 +47,8 @@ def extraction():
             userlinks.append(userlink)
             
 
+#new search '"link_type:self" href="/'
+
 ##########    
 
 #creates urls for pages 1-54 and saves into urls array
