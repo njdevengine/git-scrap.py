@@ -4,6 +4,11 @@
 ## sample excel formula ="os.system("""&D1&""")"
 ##this allows you to run command line from python3
 
+##generate your requests
+##apiurls = []
+##for i in range(1,55):
+##    apiurls.append('curl -i -u username:pass https://api.github.com/organizations/14036175/members?page='+ str(i))
+
 import bs4
 import re
 import time
