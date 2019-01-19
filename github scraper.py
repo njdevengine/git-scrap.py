@@ -15,6 +15,26 @@ import time
 from urllib.request import urlopen as uReq
 from bs4 import BeautifulSoup as soup
 
+####SITE LOGIN####
+import time
+from splinter import Browser
+executable_path = 'chromedriver'
+
+browser = Browser('chrome')
+
+url = "https://github.com/login"
+browser.visit(url)
+
+browser.fill('login', 'your_username')
+browser.fill('password', 'your_creds')
+
+button = browser.find_by_name('commit')
+button.click()
+
+########
+
+
+
 my_url = 'https://github.com/orgs/RutgersCodingBootcamp/people?page=1&query=&utf8='
 
 uReq(my_url)
